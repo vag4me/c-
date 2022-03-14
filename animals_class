@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+class animal
+{
+	private:
+		string name;
+		int age;
+		
+	public:
+		animal(string nam,int ag)
+		{
+			name = nam;
+			age = ag;
+		}
+		
+		void print()
+		{
+			cout << "the animal is " << name << " and tha age is " << age << endl;
+		};
+};
+
+
+int main() {
+	
+	string nam;
+	int age;
+	
+	
+	cout << "give the name of the animal" << endl;
+	cin >> nam;
+	cout << "give the age" << endl;
+	cin >> age;
+	animal obj1(nam,age);
+	
+	cout << "give the name of the animal" << endl;
+	cin >> nam;
+	cout << "give the age" << endl;
+	cin >> age;
+	animal obj2(nam,age);
+	
+	obj1.print();
+	obj2.print();
+	
+	
+	return 0;
+}
