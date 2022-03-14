@@ -1,0 +1,52 @@
+#include <iostream>
+#include<string>
+#include <iomanip>
+using namespace std;
+
+ class Student
+ {
+ 	private:
+ 		
+	 static int count;
+	 string name;
+	 int am;
+	 
+	public:
+		Student(string nam)
+		{
+			name = nam;
+			count++;
+			am = count;	
+		}
+	    
+	    void print_s()
+    	{
+	       cout << "Number of student: " << setfill('0') << setw(3) << am << " Name: " << name << endl;
+    	};	
+	 	
+    	
+ };
+		
+int Student:: count = 0;
+
+int main() {
+	string nam;
+	
+	cout << "give the name of a student"<< endl;
+	cin >> nam;
+	Student obj1(nam);
+	
+	cout << "give the name of a student"<< endl;
+	cin >> nam;
+	Student obj2(nam);
+	
+	cout << "give the name of a student"<< endl;
+	cin >> nam;
+	Student obj3(nam);
+	
+	obj1.print_s();
+	obj2.print_s();
+	obj3.print_s();
+	
+	return 0;
+}
