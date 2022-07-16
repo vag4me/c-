@@ -17,7 +17,7 @@ int main()
 	size_t pos = 0;
 	string token;
 	stringstream ss; 
-	int numb,total = 0;
+	int numb,total = 0,count_days = 0;
 	
 	ofstream file("elements.txt",ios::app);
 	
@@ -59,6 +59,7 @@ int main()
 	
 	while(getline (file2, line))
 	{
+		count_days++;
 		cout << line << endl;
 		pos = line.find(delimiter);
 		token = line.substr(pos+1, '/0');  
@@ -67,7 +68,7 @@ int main()
 		total += numb;
 	}
 	
-	cout << "money in total = " << total;
+	cout << "in " << count_days <<" days you earn " << total << " euros";
 
 	
 	
